@@ -40,6 +40,8 @@ $request = json_decode($postdata);
     //VARIABLES DE SESSION
     $_SESSION['nombre'] = $usuario_tabla;
     $_SESSION['session'] = true;
+    //$respuesta .= $_SESSION['nombre'].'-';
+    //$respuesta .= $_SESSION['session'].'-';
     $respuesta .= 'OK';
     
   }else{

@@ -1,13 +1,13 @@
 index.controller("login_controller", function($scope,$http){
-    $scope.estado = "OK";
-    $scope.id = "";
-    $scope.pass = "";
     
     //Login de usuario
     $scope.formLogin = {};
     
     //Crear usuario
     $scope.formAsistencia = {};
+    
+    
+    
     
     //Login
     $scope.Login = function () {
@@ -22,14 +22,22 @@ index.controller("login_controller", function($scope,$http){
         }).then(function mySuccess(response){
             
             $scope.estado = response.data;
-          if($scope.estado.trim() == "OK"){
-            location.href="http://proxi.depuntos.net";
-          }else{
-            console.log('error intentelo de nuevo')
-          }
+              if($scope.estado.trim() == "OK"){
+                location.href = "#Cuenta";
+              }else{
+                $(document).ready(function() {
+                        $('#fail_login').fadeTo(1200, 500).slideUp(500, function() {
+                          $('#fail_login').slideUp(500);
+                        });
+                });
+              }
             
         }, function myError(response){
-            console.log('todo mal');
+            $(document).ready(function() {
+                        $('#fail_login').fadeTo(1200, 500).slideUp(500, function() {
+                          $('#fail_login').slideUp(500);
+                        });
+                });
         })
      
         
@@ -38,7 +46,6 @@ index.controller("login_controller", function($scope,$http){
     
     //Crear usuario
     $scope.CrearUsuario = function () {
-        console.log('antes de enviar');
         $http({
         method: "POST",
         url: "db/Login/Crear_Usuario.php",
@@ -47,12 +54,30 @@ index.controller("login_controller", function($scope,$http){
             Pass: $scope.formAsistencia.pass
         }
         }).then(function mySuccess(response){
-            console.log('todo bien');
+            if(response.data.trim() == 'OK'){
+                $(document).ready(function() {
+                    $('#success_register').fadeTo(1200, 500).slideUp(500, function() {
+                      $('#success_register').slideUp(500);
+                    });
+                });
+            }else{
+                $(document).ready(function() {
+                    $('#fail_register').fadeTo(1200, 500).slideUp(500, function() {
+                      $('#fail_register').slideUp(500);
+                    });
+                });    
+            }
+            
             
         }, function myError(response){
-            console.log('todo mal');
+            $(document).ready(function() {
+                    $('#fail_register').fadeTo(1200, 500).slideUp(500, function() {
+                      $('#fail_register').slideUp(500);
+                    });
+            });
         })
     }
+    
     
     
 });

@@ -1,4 +1,3 @@
-
 <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
@@ -9,8 +8,9 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#Login">Entrar</a>
+            <a class="nav-link" href="#Logout">Salir</a>
           </li>
+        
           
           
         </ul>

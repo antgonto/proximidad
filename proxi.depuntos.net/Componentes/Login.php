@@ -1,3 +1,8 @@
+<?php
+include('../Funciones/Login/f_login.php');
+verifica_login();
+?>
+
 <html>
 
 <head><meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
@@ -7,23 +12,26 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="css/loginCSS.css" rel="stylesheet">
+    <link href="../css/loginCSS.css" rel="stylesheet">
 
 <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link href="../css/one-page-wonder.min.css" rel="stylesheet">
   
-  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script scr="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
 </head>
+<?php include ('nav.php'); ?>
+
 <!------ Include the above in your HEAD tag ---------->
-    <div ng-controller="login_controller">
+    <div ng-controller="login_controller" style="padding-top: 50px;" ng-init="cargar()">
         <div class="container login-container">
             <div class="row">
                 <div class="col-md-6 login-form-1">
@@ -43,7 +51,7 @@
                                 ng-model="formLogin.pass"
                                 type="password" 
                                 class="form-control" 
-                                placeholder="Contrasena" 
+                                placeholder="Contraseña" 
                                 value="" 
                             />
                         </div>
@@ -55,9 +63,12 @@
                                 value="Entrar" 
                             />
                         </div>
-                        <!--div class="form-group">
-                            <a href="#" class="ForgetPwd">Forget Password?</a>
-                        </div-->
+                    <div id='fail_login' class='alert alert-danger fade' role='alert'>
+                        Credenciales incorrectas
+                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                          <span aria-hidden='true'>&times;</span>
+                        </button>
+                    </div>
                     </form>
                 </div>
                 <div class="col-md-6 login-form-2">
@@ -90,6 +101,18 @@
                                 class="btnSubmit" 
                                 value="Crear cuenta" 
                             />
+                        </div>
+                        <div id='success_register' class='alert alert-success fade' role='alert'>
+                            Usuario creado con exitosamente
+                            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                              <span aria-hidden='true'>&times;</span>
+                            </button>
+                        </div>
+                        <div id='fail_register' class='alert alert-danger fade' role='alert'>
+                            Usuario ya existe
+                            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                              <span aria-hidden='true'>&times;</span>
+                            </button>
                         </div>
                     </form>
                 </div>

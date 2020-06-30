@@ -5,7 +5,7 @@
 
         if(isset($_SESSION['session']) && $_SESSION['session'] == true){
             
-            header('location: Home.php');
+            header('location: Cuenta.php');
 
         }else{
             

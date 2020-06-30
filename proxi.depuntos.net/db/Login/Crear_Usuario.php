@@ -18,8 +18,15 @@ $request = json_decode($postdata);
 @$Usuario = $request->Usuario;
 @$Pass = $request->Pass;
 
+//Verifica si ya existe
+$qr = "SELECT Usuario from Usuarios WHERE Usuario='$Usuario'";
+$result = $conn->query($qr);
+if(mysqli_num_rows($result) > 0){
 
-  $query = "INSERT INTO Usuarios (Usuario, Password)
+    $respuesta = 'NOK';
+    
+}else{
+    $query = "INSERT INTO Usuarios (Usuario, Password)
             VALUES ('$Usuario', '$Pass') ";
   
   
@@ -29,6 +36,9 @@ $request = json_decode($postdata);
         $respuesta = 'NOK';
     }
     
+}
+
+
 echo $respuesta;
 
 

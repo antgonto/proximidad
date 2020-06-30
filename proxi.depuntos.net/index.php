@@ -23,6 +23,7 @@ include('Funciones/Globales/f_globales.php');
         
         <!-- Tema CSS-->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/css.css" rel="stylesheet">
         
         <!-- Custom styles for this template -->
         <link href="css/one-page-wonder.min.css" rel="stylesheet">
@@ -37,6 +38,9 @@ include('Funciones/Globales/f_globales.php');
         <script src="Controladores/index.js"></script>
         <script src="Controladores/Login/login_controller.js"></script>
         <script src="Controladores/Home/c_personas.js"></script>
+        <script src="Controladores/Cuenta/cuenta_controller.js"></script>
+        <script src="Controladores/Cuenta/script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=getLocation"></script>
         
         
         <!-- Custom fonts for this template -->
@@ -51,7 +55,7 @@ include('Funciones/Globales/f_globales.php');
       <!-------------------- SECCION DINAMICA --------------------->
       <body>
       <!-- NAV -->
-      <?php include ('Componentes/nav.php'); ?>
+      <?php //include ('Componentes/nav.php'); ?>
       <div>
           <!-- IMPRIME LA SECCION DINAMICA -->
         <div ng-view></div>
