@@ -1,3 +1,3 @@
 # Proxi App - Aplicación de proximidad
 
-Ver en vivo -> proxi.depuntos.net
+Ver en vivo -> https://proxi.depuntos.net
