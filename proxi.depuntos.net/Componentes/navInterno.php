@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#Logout">Salir</a>
+            <a class="nav-link" href="/Componentes/Logout.php">Salir</a>
           </li>
         
           

@@ -21,15 +21,15 @@
   <link href="css/one-page-wonder.min.css" rel="stylesheet">
 
 </head>
+<?php include ('nav.php'); ?>
 
 <body>
-
   <header class="masthead text-center text-white">
     <div class="masthead-content">
       <div class="container">
         <h1 class="masthead-heading mb-0">¡Bienvenido a Proxi App!</h1>
         <h2 class="masthead-subheading mb-0">Tu app de proximidad inteligente</h2>
-        <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Iniciar</a>
+        <a href="#Login" class="btn btn-primary btn-xl rounded-pill mt-5">Iniciar</a>
       </div>
     </div>
     <div class="bg-circle-1 bg-circle"></div>
@@ -43,13 +43,18 @@
       <div class="row align-items-center">
         <div class="col-lg-6 order-lg-2">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="img/01.jpg" alt="">
+            <img class="img-fluid rounded-circle" style="width: 410px; height:400px;" src="img/Marketing.jpg" alt="">
           </div>
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="p-5">
-            <h2 class="display-4">For those about to rock...</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+            <h2 class="display-4">Marketing de proximidad</h2>
+            <p>
+                Una herramienta valiosa en el mundo de la tecnología, el marketing de proximidad permite a las compañías 
+                jugar con la geolocalización del usuario para poder mostrar campañas de marketing personalizadas. Esto 
+                sirve para ocasiones como eventos masivos, los usuarios pueden recibir descuentos o información relevante 
+                que quiera conocer.
+            </p>
           </div>
         </div>
       </div>
@@ -61,13 +66,17 @@
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="img/02.jpg" alt="">
+            <img class="img-fluid rounded-circle" style="width: 400px; height:400px;" src="img/Games.jpg" alt="">
           </div>
         </div>
         <div class="col-lg-6">
           <div class="p-5">
-            <h2 class="display-4">We salute you!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+            <h2 class="display-4">Juegos de proximidad</h2>
+            <p>
+                Ahora la innovación es un factor sumamente importante para poder destacarse en el mundo de los videojuegos.
+                Con la proximidad se abre la posibilidad de interacciones con objetos de la vida real, pudiendo implementar
+                nuevas funciones en los juegos. 
+            </p>
           </div>
         </div>
       </div>
@@ -79,13 +88,16 @@
       <div class="row align-items-center">
         <div class="col-lg-6 order-lg-2">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="img/03.jpg" alt="">
+            <img class="img-fluid rounded-circle" style="width: 400px; height:400px;" src="img/Chat.jpg" alt="">
           </div>
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="p-5">
-            <h2 class="display-4">Let there be rock!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+            <h2 class="display-4">Chats sociales</h2>
+            <p>
+                Ahora hay muchísimas maneras de conocer gente nueva, cuando estamos en un espacio abierto y queremos establecer 
+                una conversación, una herramienta de proximidad ayuda al primer contacto.
+            </p>
           </div>
         </div>
       </div>

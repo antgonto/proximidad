@@ -40,7 +40,7 @@ include('Funciones/Globales/f_globales.php');
         <script src="Controladores/Home/c_personas.js"></script>
         <script src="Controladores/Cuenta/cuenta_controller.js"></script>
         <script src="Controladores/Cuenta/script.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=getLocation"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
         
         
         <!-- Custom fonts for this template -->
