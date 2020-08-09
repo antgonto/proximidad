@@ -21,7 +21,7 @@
   <link href="css/one-page-wonder.min.css" rel="stylesheet">
 
 </head>
-<?php include ('nav.php'); ?>
+<?php include ('nav.php'); //Incluye el NAV ?>
 
 <body>
   <header class="masthead text-center text-white">

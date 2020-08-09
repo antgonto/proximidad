@@ -1,6 +1,6 @@
-<?php
-include('../Funciones/Globales/f_globales.php');
-verifica_login();
+<?php //Abre etiqueta PHP
+include('../Funciones/Globales/f_globales.php'); // Incluye las funciones globales 
+verifica_login(); //Verifica si el usuario ya está logeado
     
 ?>
 
@@ -26,13 +26,14 @@ verifica_login();
   <!-- Custom styles for this template -->
   <link href="../css/one-page-wonder.min.css" rel="stylesheet">
   
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script scr="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </head>
 
 <?php
-include('navInterno.php');
+include('navInterno.php'); //Incluye nav
 ?>
 
 <body>
@@ -45,12 +46,14 @@ include('navInterno.php');
          </div>
      </div>
      <div class="row">
+     <!-- ACTUALIZAR DATOS -->
          <div class="col-xs-12 col-md-6 col-xl-6">
              <div class="card" style="margin-bottom:30px;">
                 <div class="card-header text-white bg-primary" style="text-align:center;">Datos</div>
                 <div class="card-body">
                     <form method="POST">
                     <div class="row">
+                    <!-- Form de de datos del usuario -->
                         <div class="col-xs-12 col-md-12 col-xl-12">
                             <div class="form-group">
                                 <div class="card-title">Usuario: </div>
@@ -91,6 +94,7 @@ include('navInterno.php');
                 </div>
             </div> 
          </div>
+         <!-- MAPA -->
          <div class="col-xs-12 col-md-6 col-xl-6">
              <div class="card" style="margin-bottom:30px;">
                 <div class="card-header text-white bg-primary" style="text-align:center;">Mapa</div>

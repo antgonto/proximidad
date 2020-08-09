@@ -10,9 +10,6 @@
           <li class="nav-item">
             <a class="nav-link" href="/Componentes/Logout.php">Salir</a>
           </li>
-        
-          
-          
         </ul>
       </div>
     </div>

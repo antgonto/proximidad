@@ -1,8 +1,6 @@
 <?php 
 
-include('Funciones/Home/f_home.php');
-include('Funciones/Globales/f_globales.php');
-//verifica_login();
+include('Funciones/Globales/f_globales.php'); //incluye las funciones globales
 
 ?>
     
@@ -54,8 +52,7 @@ include('Funciones/Globales/f_globales.php');
       
       <!-------------------- SECCION DINAMICA --------------------->
       <body>
-      <!-- NAV -->
-      <?php //include ('Componentes/nav.php'); ?>
+
       <div>
           <!-- IMPRIME LA SECCION DINAMICA -->
         <div ng-view></div>
@@ -72,7 +69,7 @@ include('Funciones/Globales/f_globales.php');
       
       <!-------------------- Footer ----------------------->
       <footer>
-          <?php include ('Componentes/footer.php'); ?>
+          <?php include ('Componentes/footer.php'); //incluye el footer ?> 
       </footer>
     </html>
 

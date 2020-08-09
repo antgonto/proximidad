@@ -1,80 +1,45 @@
 <?php
 
-    function verifica_login(){
-        session_start();
+    function verifica_login(){ //Verifica si el usuario esta logeado 
+        session_start(); //abre la sesion
 
+        //Si el usuario esta logeado no haga nada 
         if(isset($_SESSION['session']) && $_SESSION['session'] == true){
             
     
-        }else{
+        }else{ //Sino
+
+            //Dirija usuario al Login
             echo "<script> alert('Por favor ingresar'); </script>";
             header('location: Login.php');
             
         }
     }
     
+    //funcion logout 
     function Logout(){
-        session_start();
+        session_start(); //Abre sesion
 
+        //Si el usuario esta logeado devuelva true
         if(isset($_SESSION['session']) && $_SESSION['session'] == true){
         
             return true;
     
-        }else{
+        }else{ //sino false
             
             return false;
             
         }
     }
     
-    
-    function CalculaEdad($Fecha_nac){
-        $cumpleanos = new DateTime($Fecha_nac);
-        $hoy = new DateTime();
-        $Edad = $hoy->diff($cumpleanos);
-        
-        return $Edad->y;
-    }
-    
-    
-    function FormatoFecha($fecha){
-        
-        $nuevafecha = date("d-m-Y", strtotime($fecha));
-        
-        return $nuevafecha;
-    }
-    
+    //Funcion de obtener el sesion ID del usuario
     function Get_SessionID() {
-        session_start();
-        $Usuario = $_SESSION['nombre'];
+        session_start(); //Abre la sesion 
+        $Usuario = $_SESSION['nombre']; // El usuario es igual al nombre de usuario de la sesion 
         
-        return $Usuario;
+        return $Usuario; //devuelva el usuario
         
     }
     
-    function Get_ComunidadUsuario($ID) {
-        
-        
-        $conn = OpenCon();
-        $Comunidad = "";
-        
-        $sql = "SELECT ID_Comunidad Comunidad
-                FROM Usuarios 
-                WHERE ID = '$ID' ";
-        
-        if($result = mysqli_query($conn,$sql)){
-            
-            while($row = mysqli_fetch_assoc($result))
-            {
-                
-                $Comunidad = $row["Comunidad"];
-                
-            }
-        }
-        
-        return $Comunidad;
-        
-        
-    }
-   
+ 
 ?>

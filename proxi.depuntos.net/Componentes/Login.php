@@ -1,6 +1,6 @@
 <?php
-include('../Funciones/Login/f_login.php');
-verifica_login();
+include('../Funciones/Login/f_login.php'); // Incluye las funciones globales 
+verifica_login(); //Verifica si el usuario ya está logeado
 ?>
 
 <html>
@@ -9,9 +9,12 @@ verifica_login();
     
     <title>Proxi App Login</title>
     
+    <!-- Bootstrap y Jquery -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap y Jquery -->
     <link href="../css/loginCSS.css" rel="stylesheet">
 
 <!-- Bootstrap core CSS -->
@@ -24,13 +27,14 @@ verifica_login();
   <!-- Custom styles for this template -->
   <link href="../css/one-page-wonder.min.css" rel="stylesheet">
   
+  <!-- Bootsrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script scr="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
 </head>
-<?php include ('nav.php'); ?>
+<?php include ('nav.php'); //Incluye NAV ?>
 
-<!------ Include the above in your HEAD tag ---------->
+<!------ Form de login ---------->
     <div ng-controller="login_controller" style="padding-top: 50px;" ng-init="cargar()">
         <div class="container login-container">
             <div class="row">
